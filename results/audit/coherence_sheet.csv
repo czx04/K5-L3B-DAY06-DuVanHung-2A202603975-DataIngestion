@@ -5,26 +5,26 @@ NHỮNG QUY ĐỊNH CHUNG
 Bộ luật Lao động quy định tiêu chuẩn lao động; quyền, nghĩa vụ, trách nhiệm của người lao động, người sử dụng lao động, tổ chức đại diện người lao động tại cơ sở, tổ chức đại diện người sử dụng lao động trong quan hệ lao động và các quan hệ khác liên quan trực tiếp đến quan hệ lao động; quản lý nhà nước về lao động.
 Điều 2. Đối tượng áp dụng
 1. Người lao động, người học nghề, người tập nghề và người làm việc không có quan hệ lao động.
-2. Ng",,
+2. Ng",2,"Vị trí (thân Điều 1) trọn vẹn, có tiêu đề Điều 1; chỉ hai mép chunk bị cắt ('hương I', '2. Ng')."
 pos02,10,5. Bộ trưởng Bộ Lao động - Thương binh và Xã hội quy định ch,A,blld-vbhn-125-2025:A:p010:002,"dung của hợp đồng lao động đối với người lao động được thuê làm giám đốc trong doanh nghiệp có vốn nhà nước.
 5. Bộ trưởng Bộ Lao động - Thương binh và Xã hội quy định chi tiết các khoản 1, 2 và 3 Điều này.
 Điều 22. Phụ lục hợp đồng lao động
 1. Phụ lục hợp đồng lao động là bộ phận của hợp đồng lao động và có hiệu lực như hợp đồng lao động.
-2. Phụ lục hợp đồng lao động quy định chi tiết, sửa đổi, bổ sung một số điều, khoản của hợp đồng lao động nhưng không được sửa đổi thời hạn của hợp đồng lao độ",,
+2. Phụ lục hợp đồng lao động quy định chi tiết, sửa đổi, bổ sung một số điều, khoản của hợp đồng lao động nhưng không được sửa đổi thời hạn của hợp đồng lao độ",1,Câu khoản 5 trọn nhưng 'Điều này' trỏ tới Điều 21 không có trong chunk; chunk bắt đầu giữa câu và trộn đầu Điều 22 bị cắt.
 pos03,20,2. Thời gian làm việc để tính trợ cấp mất việc làm là tổng t,A,blld-vbhn-125-2025:A:p020:002,"của Bộ luật này, cứ mỗi năm làm việc trả 01 tháng tiền lương nhưng ít nhất bằng 02 tháng tiền lương.
 2. Thời gian làm việc để tính trợ cấp mất việc làm là tổng thời gian người lao động đã làm việc thực tế cho người sử dụng lao động trừ đi thời gian người lao động đã tham gia bảo hiểm thất nghiệp theo quy định của pháp luật về bảo hiểm thất nghiệp và thời gian làm việc đã được người sử dụng lao động chi trả trợ cấp thôi việc, trợ cấp mất việc làm.
-3. Tiền lương để tính trợ cấp mất việc làm là ti",,
+3. Tiền lương để tính trợ cấp mất việc làm là ti",1,Khoản 2 trọn nhưng thiếu tiêu đề Điều 47; chunk mở đầu giữa câu khoản 1 và kết thúc cắt giữa khoản 3 ('là ti').
 pos04,29,"Người sử dụng lao động có trách nhiệm bố trí thời gian, địa ",A,blld-vbhn-125-2025:A:p029:002,"c yêu cầu của người sử dụng lao động thì bên nhận được yêu cầu không được từ chối việc thương lượng.
 Trong thời hạn 07 ngày làm việc kể từ ngày nhận được yêu cầu và nội dung thương lượng, các bên thỏa thuận về địa điểm, thời gian bắt đầu thương lượng.
 Người sử dụng lao động có trách nhiệm bố trí thời gian, địa điểm và các điều kiện cần thiết để tổ chức các phiên họp thương lượng tập thể.
 Thời gian bắt đầu thương lượng không được quá 30 ngày kể từ ngày nhận được yêu cầu thương lượng tập thể.
-2. T",,
+2. T",1,Câu tại vị trí trọn nhưng không có tiêu đề Điều 70 (quy trình thương lượng); mở đầu giữa câu.
 pos05,38,Trường hợp trả lương qua tài khoản cá nhân của người lao độn,A,blld-vbhn-125-2025:A:p038:002,"ười sử dụng lao động và người lao động thỏa thuận về hình thức trả lương theo thời gian, sản phẩm hoặc khoán.
 2. Lương được trả bằng tiền mặt hoặc trả qua tài khoản cá nhân của người lao động được mở tại ngân hàng.
 Trường hợp trả lương qua tài khoản cá nhân của người lao động được mở tại ngân hàng thì người sử dụng lao động phải trả các loại phí liên quan đến việc mở tài khoản và chuyển tiền lương.
 3. Chính phủ quy định chi tiết Điều này.
 Điều 97. Kỳ hạn trả lương
-1. Người lao động hưởng lương t",,
+1. Người lao động hưởng lương t",1,"Câu về trả lương qua tài khoản trọn, nhưng thiếu tiêu đề Điều 96, đầu chunk cắt chữ ('ười sử dụng') và lẫn đầu Điều 97."
 pos06,48,3. Cách chức.,A,blld-vbhn-125-2025:A:p048:002,"hời hạn quy định tại khoản 1 và khoản 2 Điều này.
 Điều 124. Hình thức xử lý kỷ luật lao động
 1. Khiển trách.
@@ -34,62 +34,62 @@ pos06,48,3. Cách chức.,A,blld-vbhn-125-2025:A:p048:002,"hời hạn quy đị
 Điều 125. Áp dụng hình thức xử lý kỷ luật sa thải
 Hình thức xử lý kỷ luật sa thải được người sử dụng lao động áp dụng trong trường hợp sau đây:
 1. Người lao động có hành vi trộm cắp, tham ô, đánh bạc, cố ý gây thương tích, sử dụng ma tuý tại nơi làm việc;
-2. Người lao động có hành vi tiết lộ bí mật kinh doanh, bí",,
+2. Người lao động có hành vi tiết lộ bí mật kinh doanh, bí",2,"Điều 124 trọn vẹn kèm tiêu đề; phần thừa ở hai đầu (cuối Điều 123, đầu Điều 125) không làm sai nghĩa."
 pos07,57,Người lao động Việt Nam đi làm việc ở nước ngoài phải tuân t,A,blld-vbhn-125-2025:A:p057:002,"các tổ chức, cá nhân nước ngoài tại Việt Nam
 1. Nhà nước khuyến khích doanh nghiệp, cơ quan, tổ chức, cá nhân tìm kiếm và mở rộng thị trường lao động để đưa người lao động Việt Nam đi làm việc ở nước ngoài.
 Người lao động Việt Nam đi làm việc ở nước ngoài phải tuân theo quy định của pháp luật Việt Nam, pháp luật nước sở tại, trừ trường hợp điều ước quốc tế mà nước Cộng hòa xã hội chủ nghĩa Việt Nam là thành viên có quy định khác.
-2. Công dân Việt Nam làm việc cho các tổ chức nước ngoài tại Việt",,
+2. Công dân Việt Nam làm việc cho các tổ chức nước ngoài tại Việt",1,Khoản 1 trọn nhưng tiêu đề Điều 150 bị cắt mất nửa đầu; thiếu ngữ cảnh Mục 3.
 pos08,66,3. Tổ chức đại diện người lao động tại cơ sở và người sử dụn,A,blld-vbhn-125-2025:A:p066:002,"mà người sử dụng lao động dành cho toàn bộ thành viên ban lãnh đạo của tổ chức đại diện người lao động tại cơ sở để thực hiện nhiệm vụ của tổ chức đại diện trên cơ sở số lượng thành viên của tổ chức.
-3. Tổ chức đại diện người lao động tại cơ sở và người sử dụng lao động thỏa thuận về thời gian tăng thêm so với thời gian tối thiểu quy định tại khoản 2 Điều này và cách thức sử dụng thời gian làm việc của thành viên ban lãnh đạo của tổ chức đại diện người lao động tại cơ sở phù hợp với điều kiện th",,
+3. Tổ chức đại diện người lao động tại cơ sở và người sử dụng lao động thỏa thuận về thời gian tăng thêm so với thời gian tối thiểu quy định tại khoản 2 Điều này và cách thức sử dụng thời gian làm việc của thành viên ban lãnh đạo của tổ chức đại diện người lao động tại cơ sở phù hợp với điều kiện th",0,Chính khoản 3 tại vị trí bị cắt giữa câu ('phù hợp với điều kiện th'); thiếu tiêu đề Điều 176.
 pos09,76,b) Tổ chức đại diện người lao động có quyền tiến hành thủ tụ,A,blld-vbhn-125-2025:A:p076:002,"thỏa thuận trong biên bản hòa giải thành thì các bên tranh chấp có quyền lựa chọn một trong các phương thức sau để giải quyết tranh chấp:
 a) Yêu cầu Hội đồng trọng tài lao động giải quyết theo quy định tại Điều 197 của Bộ luật này;
 b) Tổ chức đại diện người lao động có quyền tiến hành thủ tục quy định tại các điều 200, 201 và 202 của Bộ luật này để đình công.
 Điều 197. Giải quyết tranh chấp lao động tập thể về lợi ích của Hội đồng trọng tài lao động
-1. Trên cơ sở đồng thuận, các bên tranh chấp",,
+1. Trên cơ sở đồng thuận, các bên tranh chấp",1,"Điểm b trọn nhưng điều kiện dẫn vào ('Trường hợp hòa giải không thành…') bị cắt, chỉ còn nửa câu; thiếu tiêu đề Điều 196."
 pos10,85,1. Tranh chấp lao động cá nhân giữa người lao động với người,A,blld-vbhn-125-2025:A:p085:002,"bổ sung các khoản 1a, 1b và 1c vào sau khoản 1 như sau:
 “Điều 32. Những tranh chấp về lao động và tranh chấp liên quan đến lao động thuộc thẩm quyền giải quyết của Tòa án
-1. Tranh chấp lao động cá nhân giữa người lao động với người sử dụng lao động phải thông qua thủ tục hòa giải của hòa giải viên lao động mà hòa giải thành nhưng các bên không thực hiện hoặc thực hiện không đúng, hòa giải không thành hoặc hết thời hạn hòa giải theo quy định của pháp luật về lao động mà hòa giải viên lao động khô",,
+1. Tranh chấp lao động cá nhân giữa người lao động với người sử dụng lao động phải thông qua thủ tục hòa giải của hòa giải viên lao động mà hòa giải thành nhưng các bên không thực hiện hoặc thực hiện không đúng, hòa giải không thành hoặc hết thời hạn hòa giải theo quy định của pháp luật về lao động mà hòa giải viên lao động khô",0,"Khoản 1 (Điều 32 BLTTDS được sửa) bị cắt giữa câu ('hòa giải viên lao động khô'), mất danh sách ngoại lệ."
 pos01,1,"Bộ luật Lao động quy định tiêu chuẩn lao động; quyền, nghĩa ",B (= C),blld-vbhn-125-2025:B:p001:001,"Chương I
 NHỮNG QUY ĐỊNH CHUNG
 Điều 1. Phạm vi điều chỉnh
-Bộ luật Lao động quy định tiêu chuẩn lao động; quyền, nghĩa vụ, trách nhiệm của người lao động, người sử dụng lao động, tổ chức đại diện người lao động tại cơ sở, tổ chức đại diện người sử dụng lao động trong quan hệ lao động và các quan hệ khác liên quan trực tiếp đến quan hệ lao động; quản lý nhà nước về lao động.",,
+Bộ luật Lao động quy định tiêu chuẩn lao động; quyền, nghĩa vụ, trách nhiệm của người lao động, người sử dụng lao động, tổ chức đại diện người lao động tại cơ sở, tổ chức đại diện người sử dụng lao động trong quan hệ lao động và các quan hệ khác liên quan trực tiếp đến quan hệ lao động; quản lý nhà nước về lao động.",2,"Chương I + Điều 1 trọn vẹn, tự hiểu được."
 pos02,10,5. Bộ trưởng Bộ Lao động - Thương binh và Xã hội quy định ch,B (= C),blld-vbhn-125-2025:B:p010:001,"Điều 21. Nội dung hợp đồng lao động (tiếp)
 3. Đối với người lao động làm việc trong lĩnh vực nông nghiệp, lâm nghiệp, ngư nghiệp, diêm nghiệp thì tùy theo loại công việc mà hai bên có thể giảm một số nội dung chủ yếu của hợp đồng lao động và thỏa thuận bổ sung nội dung về phương thức giải quyết trong trường hợp thực hiện hợp đồng chịu ảnh hưởng của thiên tai, hỏa hoạn, thời tiết.
 4. Chính phủ quy định nội dung của hợp đồng lao động đối với người lao động được thuê làm giám đốc trong doanh nghiệp có vốn nhà nước.
-5. Bộ trưởng Bộ Lao động - Thương binh và Xã hội quy định chi tiết các khoản 1, 2 và 3 Điều này.",,
+5. Bộ trưởng Bộ Lao động - Thương binh và Xã hội quy định chi tiết các khoản 1, 2 và 3 Điều này.",2,"Có tiền tố 'Điều 21 … (tiếp)', khoản 3–5 trọn; 'Điều này' xác định được."
 pos03,20,2. Thời gian làm việc để tính trợ cấp mất việc làm là tổng t,B (= C),blld-vbhn-125-2025:B:p020:001,"Điều 47. Trợ cấp mất việc làm
 1. Người sử dụng lao động trả trợ cấp mất việc làm cho người lao động đã làm việc thường xuyên cho mình từ đủ 12 tháng trở lên mà bị mất việc làm theo quy định tại khoản 11 Điều 34 của Bộ luật này, cứ mỗi năm làm việc trả 01 tháng tiền lương nhưng ít nhất bằng 02 tháng tiền lương.
-2. Thời gian làm việc để tính trợ cấp mất việc làm là tổng thời gian người lao động đã làm việc thực tế cho người sử dụng lao động trừ đi thời gian người lao động đã tham gia bảo hiểm thất nghiệp theo quy định của pháp luật về bảo hiểm thất nghiệp và thời gian làm việc đã được người sử dụng lao động chi trả trợ cấp thôi việc, trợ cấp mất việc làm.",,
+2. Thời gian làm việc để tính trợ cấp mất việc làm là tổng thời gian người lao động đã làm việc thực tế cho người sử dụng lao động trừ đi thời gian người lao động đã tham gia bảo hiểm thất nghiệp theo quy định của pháp luật về bảo hiểm thất nghiệp và thời gian làm việc đã được người sử dụng lao động chi trả trợ cấp thôi việc, trợ cấp mất việc làm.",2,Tiêu đề Điều 47 + khoản 1–2 trọn vẹn.
 pos04,29,"Người sử dụng lao động có trách nhiệm bố trí thời gian, địa ",B (= C),blld-vbhn-125-2025:B:p029:001,"Điều 70. Quy trình thương lượng tập thể tại doanh nghiệp
 1. Khi có yêu cầu thương lượng tập thể của tổ chức đại diện người lao động tại cơ sở có quyền yêu cầu thương lượng tập thể theo quy định tại Điều 68 của Bộ luật này hoặc yêu cầu của người sử dụng lao động thì bên nhận được yêu cầu không được từ chối việc thương lượng.
 Trong thời hạn 07 ngày làm việc kể từ ngày nhận được yêu cầu và nội dung thương lượng, các bên thỏa thuận về địa điểm, thời gian bắt đầu thương lượng.
 Người sử dụng lao động có trách nhiệm bố trí thời gian, địa điểm và các điều kiện cần thiết để tổ chức các phiên họp thương lượng tập thể.
-Thời gian bắt đầu thương lượng không được quá 30 ngày kể từ ngày nhận được yêu cầu thương lượng tập thể.",,
+Thời gian bắt đầu thương lượng không được quá 30 ngày kể từ ngày nhận được yêu cầu thương lượng tập thể.",2,Tiêu đề Điều 70 + khoản 1 trọn vẹn.
 pos05,38,Trường hợp trả lương qua tài khoản cá nhân của người lao độn,B (= C),blld-vbhn-125-2025:B:p038:002,"Điều 96. Hình thức trả lương
 1. Người sử dụng lao động và người lao động thỏa thuận về hình thức trả lương theo thời gian, sản phẩm hoặc khoán.
 2. Lương được trả bằng tiền mặt hoặc trả qua tài khoản cá nhân của người lao động được mở tại ngân hàng.
 Trường hợp trả lương qua tài khoản cá nhân của người lao động được mở tại ngân hàng thì người sử dụng lao động phải trả các loại phí liên quan đến việc mở tài khoản và chuyển tiền lương.
-3. Chính phủ quy định chi tiết Điều này.",,
+3. Chính phủ quy định chi tiết Điều này.",2,Toàn bộ Điều 96 trong một chunk.
 pos06,48,3. Cách chức.,B (= C),blld-vbhn-125-2025:B:p048:002,"Điều 124. Hình thức xử lý kỷ luật lao động
 1. Khiển trách.
 2. Kéo dài thời hạn nâng lương không quá 06 tháng.
 3. Cách chức.
-4. Sa thải.",,
+4. Sa thải.",2,Toàn bộ Điều 124 trong một chunk.
 pos07,57,Người lao động Việt Nam đi làm việc ở nước ngoài phải tuân t,B (= C),blld-vbhn-125-2025:B:p057:001,"Mục 3
 NGƯỜI LAO ĐỘNG VIỆT NAM ĐI LÀM VIỆC Ở NƯỚC NGOÀI, LAO ĐỘNG CHO CÁC TỔ CHỨC, CÁ NHÂN NƯỚC NGOÀI TẠI VIỆT NAM, LAO ĐỘNG LÀ NGƯỜI NƯỚC NGOÀI LÀM VIỆC TẠI VIỆT NAM
 Điều 150. Người lao động Việt Nam đi làm việc ở nước ngoài, lao động cho các tổ chức, cá nhân nước ngoài tại Việt Nam
 1. Nhà nước khuyến khích doanh nghiệp, cơ quan, tổ chức, cá nhân tìm kiếm và mở rộng thị trường lao động để đưa người lao động Việt Nam đi làm việc ở nước ngoài.
-Người lao động Việt Nam đi làm việc ở nước ngoài phải tuân theo quy định của pháp luật Việt Nam, pháp luật nước sở tại, trừ trường hợp điều ước quốc tế mà nước Cộng hòa xã hội chủ nghĩa Việt Nam là thành viên có quy định khác.",,
+Người lao động Việt Nam đi làm việc ở nước ngoài phải tuân theo quy định của pháp luật Việt Nam, pháp luật nước sở tại, trừ trường hợp điều ước quốc tế mà nước Cộng hòa xã hội chủ nghĩa Việt Nam là thành viên có quy định khác.",2,Tiêu đề Mục 3 + Điều 150 khoản 1 trọn vẹn.
 pos08,66,3. Tổ chức đại diện người lao động tại cơ sở và người sử dụn,B (= C),blld-vbhn-125-2025:B:p066:001,"Điều 176. Quyền của thành viên ban lãnh đạo của tổ chức đại diện người lao động tại cơ sở (tiếp)
 d) Được hưởng các bảo đảm khác trong quan hệ lao động và trong việc thực hiện chức năng đại diện theo quy định của pháp luật.
 2. Chính phủ quy định thời gian tối thiểu mà người sử dụng lao động dành cho toàn bộ thành viên ban lãnh đạo của tổ chức đại diện người lao động tại cơ sở để thực hiện nhiệm vụ của tổ chức đại diện trên cơ sở số lượng thành viên của tổ chức.
-3. Tổ chức đại diện người lao động tại cơ sở và người sử dụng lao động thỏa thuận về thời gian tăng thêm so với thời gian tối thiểu quy định tại khoản 2 Điều này và cách thức sử dụng thời gian làm việc của thành viên ban lãnh đạo của tổ chức đại diện người lao động tại cơ sở phù hợp với điều kiện thực tế.",,
+3. Tổ chức đại diện người lao động tại cơ sở và người sử dụng lao động thỏa thuận về thời gian tăng thêm so với thời gian tối thiểu quy định tại khoản 2 Điều này và cách thức sử dụng thời gian làm việc của thành viên ban lãnh đạo của tổ chức đại diện người lao động tại cơ sở phù hợp với điều kiện thực tế.",2,"Tiền tố 'Điều 176 (tiếp)', khoản 2–3 trọn; điểm d đầu chunk là phần cuối khoản 1 nhưng vẫn là câu trọn."
 pos09,76,b) Tổ chức đại diện người lao động có quyền tiến hành thủ tụ,B (= C),blld-vbhn-125-2025:B:p076:002,"Điều 196. Trình tự, thủ tục giải quyết tranh chấp lao động tập thể về lợi ích (tiếp)
 3. Trường hợp hòa giải không thành hoặc hết thời hạn hòa giải quy định tại khoản 2 Điều 188 của Bộ luật này mà hòa giải viên lao động không tiến hành hòa giải hoặc một trong các bên không thực hiện thỏa thuận trong biên bản hòa giải thành thì các bên tranh chấp có quyền lựa chọn một trong các phương thức sau để giải quyết tranh chấp:
 a) Yêu cầu Hội đồng trọng tài lao động giải quyết theo quy định tại Điều 197 của Bộ luật này;
-b) Tổ chức đại diện người lao động có quyền tiến hành thủ tục quy định tại các điều 200, 201 và 202 của Bộ luật này để đình công.",,
+b) Tổ chức đại diện người lao động có quyền tiến hành thủ tục quy định tại các điều 200, 201 và 202 của Bộ luật này để đình công.",2,"Tiền tố 'Điều 196 (tiếp)', khoản 3 cùng điều kiện và hai phương án a, b trọn vẹn."
 pos10,85,1. Tranh chấp lao động cá nhân giữa người lao động với người,B (= C),blld-vbhn-125-2025:B:p085:001,"Điều 219. Sửa đổi, bổ sung một số điều của các luật có liên quan đến lao động (tiếp)
 2. Sửa đổi, bổ sung Điều 32 của Bộ luật Tố tụng dân sự số 92/2015/QH13 như sau:
 a) Sửa đổi, bổ sung tên điều, khoản 1; bổ sung các khoản 1a, 1b và 1c vào sau khoản 1 như sau:
 “Điều 32. Những tranh chấp về lao động và tranh chấp liên quan đến lao động thuộc thẩm quyền giải quyết của Tòa án
-1. Tranh chấp lao động cá nhân giữa người lao động với người sử dụng lao động phải thông qua thủ tục hòa giải của hòa giải viên lao động mà hòa giải thành nhưng các bên không thực hiện hoặc thực hiện không đúng, hòa giải không thành hoặc hết thời hạn hòa giải theo quy định của pháp luật về lao động mà hòa giải viên lao động không tiến hành hòa giải, trừ các tranh chấp lao động sau đây không bắt buộc phải qua thủ tục hòa giải:",,
+1. Tranh chấp lao động cá nhân giữa người lao động với người sử dụng lao động phải thông qua thủ tục hòa giải của hòa giải viên lao động mà hòa giải thành nhưng các bên không thực hiện hoặc thực hiện không đúng, hòa giải không thành hoặc hết thời hạn hòa giải theo quy định của pháp luật về lao động mà hòa giải viên lao động không tiến hành hòa giải, trừ các tranh chấp lao động sau đây không bắt buộc phải qua thủ tục hòa giải:",1,"Câu tại vị trí trọn, nhưng danh sách 'các tranh chấp… sau đây' bị đẩy sang chunk sau (giới hạn 800 ký tự); văn bản trích sửa luật khác nên cần thêm ngữ cảnh."

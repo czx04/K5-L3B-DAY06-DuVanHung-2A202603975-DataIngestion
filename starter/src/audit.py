@@ -124,7 +124,11 @@ def cmd_audit(_args) -> None:
 
 
 def cmd_audit_summary(_args) -> None:
-    out, missing = ["# Audit thủ công — tổng hợp", "", "Người chấm: tác giả bài (nguy cơ thiên lệch: tác giả cũng thiết kế pipeline).", ""]
+    missing: list[str] = []
+    out = ["# Audit thủ công — tổng hợp", "",
+           "Quy trình chấm: nhãn và lý do do AI (Claude) đề xuất, tác giả đã đọc lại toàn bộ và chấp nhận "
+           "không sửa ô nào (2026-11-14). Nguy cơ thiên lệch: tác giả cũng là người thiết kế pipeline; "
+           "nhãn AI có thể bị neo theo kết quả tự động; chỉ một người duyệt, không đo độ đồng thuận.", ""]
     coh = _read(AUDIT / "coherence_sheet.csv")
     by = defaultdict(list)
     for r in coh:
