@@ -1,0 +1,65 @@
+{
+  "rule": "Rule fixed independently of scores: 10 pages evenly spread over the\n    counted pages; position = start of the paragraph containing the page midpoint.",
+  "positions": [
+    {
+      "position_id": "pos01",
+      "page": 1,
+      "char_offset": 506,
+      "anchor": "Bộ luật Lao động quy định tiêu chuẩn lao động; quyền, nghĩa "
+    },
+    {
+      "position_id": "pos02",
+      "page": 10,
+      "char_offset": 1009,
+      "anchor": "5. Bộ trưởng Bộ Lao động - Thương binh và Xã hội quy định ch"
+    },
+    {
+      "position_id": "pos03",
+      "page": 20,
+      "char_offset": 1002,
+      "anchor": "2. Thời gian làm việc để tính trợ cấp mất việc làm là tổng t"
+    },
+    {
+      "position_id": "pos04",
+      "page": 29,
+      "char_offset": 1152,
+      "anchor": "Người sử dụng lao động có trách nhiệm bố trí thời gian, địa "
+    },
+    {
+      "position_id": "pos05",
+      "page": 38,
+      "char_offset": 1115,
+      "anchor": "Trường hợp trả lương qua tài khoản cá nhân của người lao độn"
+    },
+    {
+      "position_id": "pos06",
+      "page": 48,
+      "char_offset": 1060,
+      "anchor": "3. Cách chức."
+    },
+    {
+      "position_id": "pos07",
+      "page": 57,
+      "char_offset": 1108,
+      "anchor": "Người lao động Việt Nam đi làm việc ở nước ngoài phải tuân t"
+    },
+    {
+      "position_id": "pos08",
+      "page": 66,
+      "char_offset": 1100,
+      "anchor": "3. Tổ chức đại diện người lao động tại cơ sở và người sử dụn"
+    },
+    {
+      "position_id": "pos09",
+      "page": 76,
+      "char_offset": 1133,
+      "anchor": "b) Tổ chức đại diện người lao động có quyền tiến hành thủ tụ"
+    },
+    {
+      "position_id": "pos10",
+      "page": 85,
+      "char_offset": 1071,
+      "anchor": "1. Tranh chấp lao động cá nhân giữa người lao động với người"
+    }
+  ]
+}

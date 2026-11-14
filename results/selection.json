@@ -1,0 +1,31 @@
+{
+  "selected": "B",
+  "ranking": [
+    "B",
+    "C",
+    "A"
+  ],
+  "selected_at": "2026-11-14T03:31:09+00:00",
+  "rule": "dev Evidence Hit@3, rồi Hit@1, rồi filter compliance (thay cho coherence khi chưa có nhãn), rồi ít chunk hơn",
+  "tied_on_hit3_hit1": [
+    "B",
+    "C"
+  ],
+  "dev": {
+    "A": {
+      "hit_at_1": "6/15",
+      "hit_at_3": "10/15",
+      "filter": "2/3"
+    },
+    "B": {
+      "hit_at_1": "10/15",
+      "hit_at_3": "14/15",
+      "filter": "3/3"
+    },
+    "C": {
+      "hit_at_1": "10/15",
+      "hit_at_3": "14/15",
+      "filter": "3/3"
+    }
+  }
+}

@@ -2,6 +2,11 @@
 
   python -m src.ingest                      # step 1: PDF -> data/processed/pages.jsonl
   python -m src.run index                   # step 2: chunk A/B, embed, store, re-ingest check
+  python -m src.run eval --split dev       # step 3: top-3 traces + Hit@1/Hit@3 on dev
+  python -m src.run select                  # step 4: choose strategy from DEV only (pre-registered rule)
+  python -m src.run eval --split test       # step 5: only allowed after `select`
+  python -m src.run audit                   # step 6: manual-label sheets (coherence, metadata, grounding)
+  python -m src.run audit-summary           # step 7: aggregate the labels you filled in
   python -m src.run query "câu hỏi" -s C --chapter X   # smoke test
 """
 from __future__ import annotations
@@ -18,7 +23,8 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 from .chunking import build_chunks
-from .config import PAGES_FILE, RESULTS, STRATEGIES, TOP_K
+from .config import PAGES_FILE, QUESTIONS_FILE, RESULTS, STRATEGIES, TOP_K
+from .evaluation import evaluate_query, summarize
 from .embeddings import get_embedder
 from .models import DocumentPage
 from .store import PgVectorStore
@@ -119,16 +125,86 @@ def cmd_query(args) -> None:
         print(f"{h['score']:.4f} p{h['page']} ch{h['chapter']} Đ{h['article']} {h['chunk_id']}\n   {h['text'][:200]!r}")
 
 
+def cmd_eval(args) -> None:
+    split = args.split
+    sel_file = RESULTS / "selection.json"
+    if split == "test" and not sel_file.exists():
+        raise SystemExit("Run `python -m src.run select` on dev before evaluating test.")
+    questions = [q for q in json.load(open(QUESTIONS_FILE, encoding="utf-8")) if q["split"] == split]
+    embedder = get_embedder()
+    store = open_store(embedder)
+    (RESULTS / "traces").mkdir(parents=True, exist_ok=True)
+    traces, t0 = [], time.perf_counter()
+    qvecs = {q["id"]: embedder.embed_query(q["question"]) for q in questions}
+    for name, cfg in STRATEGIES.items():
+        rows = []
+        for q in questions:
+            filters = {"chapter": q["filter"]["chapter"]} if (cfg["use_filter"] and q.get("filter")) else None
+            hits = store.search(cfg["index"], qvecs[q["id"]], TOP_K, filters)
+            rows.append(evaluate_query(q, hits, name, filters))
+        with open(RESULTS / "traces" / f"{split}_{name}.jsonl", "w", encoding="utf-8") as f:
+            for r in rows:
+                f.write(json.dumps(r, ensure_ascii=False) + "\n")
+        traces += rows
+    summary = summarize(traces)
+    meta = {"split": split, "run_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+            "embedding": embedder.info()["model"], "top_k": TOP_K,
+            "seconds": round(time.perf_counter() - t0, 2), "summary": summary}
+    (RESULTS / f"metrics_{split}.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
+    ids = [q["id"] for q in questions]
+    lines = [f"# Retrieval metrics — {split} ({len(ids)} câu, top-{TOP_K})", "",
+             "| Strategy | Hit@1 | Evidence Hit@3 | Filter tuân thủ | Evidence bị tách | Miss@3 |",
+             "|---|---|---|---|---|---|"]
+    for name in STRATEGIES:
+        s = summary[name][split]
+        lines.append(f"| {name} | {s['hit_at_1_str']} | {s['hit_at_3_str']} | {s['filter_compliance_str']} "
+                     f"| {s['evidence_split']} | {', '.join(s['misses']) or '-'} |")
+    lines += ["", "Hạng của chunk hit đầu tiên (– = không hit trong top-3):", "",
+              "| id | " + " | ".join(STRATEGIES) + " |", "|---|" + "---|" * len(STRATEGIES)]
+    by = {(t["strategy"], t["id"]): t for t in traces}
+    for i in ids:
+        lines.append(f"| {i} | " + " | ".join(str(by[(n, i)]["first_hit_rank"] or "–") for n in STRATEGIES) + " |")
+    (RESULTS / f"metrics_{split}.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print("\n".join(lines))
+    print(f"-> results/metrics_{split}.json, results/metrics_{split}.md, results/traces/{split}_*.jsonl")
+
+
+def cmd_select(_args) -> None:
+    m = json.load(open(RESULTS / "metrics_dev.json", encoding="utf-8"))["summary"]
+    # pre-registered rule (benchmark/README.md): Hit@3 > Hit@1 > coherence/filter > resources
+    idx = json.load(open(RESULTS / "index_run.json", encoding="utf-8"))["first_ingest"]
+    rank = sorted(STRATEGIES, key=lambda n: (-m[n]["dev"]["hit_at_3"], -m[n]["dev"]["hit_at_1"],
+                                             -m[n]["dev"]["filter_compliant"],
+                                             idx[STRATEGIES[n]["index"]]["chunk_count"]))
+    best = rank[0]
+    tied = [n for n in rank if (m[n]["dev"]["hit_at_3"], m[n]["dev"]["hit_at_1"]) ==
+            (m[best]["dev"]["hit_at_3"], m[best]["dev"]["hit_at_1"])]
+    out = {"selected": best, "ranking": rank, "selected_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+           "rule": "dev Evidence Hit@3, rồi Hit@1, rồi filter compliance (thay cho coherence khi chưa có nhãn), rồi ít chunk hơn",
+           "tied_on_hit3_hit1": tied,
+           "dev": {n: {"hit_at_1": m[n]["dev"]["hit_at_1_str"], "hit_at_3": m[n]["dev"]["hit_at_3_str"],
+                       "filter": m[n]["dev"]["filter_compliance_str"]} for n in STRATEGIES}}
+    (RESULTS / "selection.json").write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(json.dumps(out, ensure_ascii=False, indent=2))
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
     sub.add_parser("index")
+    e = sub.add_parser("eval")
+    e.add_argument("--split", required=True, choices=["dev", "test"])
+    sub.add_parser("select")
+    sub.add_parser("audit")
+    sub.add_parser("audit-summary")
     q = sub.add_parser("query")
     q.add_argument("question")
     q.add_argument("-s", "--strategy", default="B", choices=list(STRATEGIES))
     q.add_argument("--chapter")
     args = ap.parse_args()
-    {"index": cmd_index, "query": cmd_query}[args.cmd](args)
+    from .audit import cmd_audit, cmd_audit_summary
+    {"index": cmd_index, "query": cmd_query, "eval": cmd_eval, "select": cmd_select,
+     "audit": cmd_audit, "audit-summary": cmd_audit_summary}[args.cmd](args)
 
 
 if __name__ == "__main__":

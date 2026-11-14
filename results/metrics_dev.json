@@ -1,0 +1,61 @@
+{
+  "split": "dev",
+  "run_at": "2026-11-14T03:30:58+00:00",
+  "embedding": "bkai-foundation-models/vietnamese-bi-encoder",
+  "top_k": 3,
+  "seconds": 1.69,
+  "summary": {
+    "A": {
+      "dev": {
+        "n": 15,
+        "hit_at_1": 6,
+        "hit_at_3": 10,
+        "evidence_split": 2,
+        "filter_questions": 3,
+        "filter_compliant": 2,
+        "misses": [
+          "q01",
+          "q04",
+          "q06",
+          "q07",
+          "q14"
+        ],
+        "hit_at_1_str": "6/15",
+        "hit_at_3_str": "10/15",
+        "filter_compliance_str": "2/3"
+      }
+    },
+    "B": {
+      "dev": {
+        "n": 15,
+        "hit_at_1": 10,
+        "hit_at_3": 14,
+        "evidence_split": 0,
+        "filter_questions": 3,
+        "filter_compliant": 3,
+        "misses": [
+          "q07"
+        ],
+        "hit_at_1_str": "10/15",
+        "hit_at_3_str": "14/15",
+        "filter_compliance_str": "3/3"
+      }
+    },
+    "C": {
+      "dev": {
+        "n": 15,
+        "hit_at_1": 10,
+        "hit_at_3": 14,
+        "evidence_split": 0,
+        "filter_questions": 3,
+        "filter_compliant": 3,
+        "misses": [
+          "q07"
+        ],
+        "hit_at_1_str": "10/15",
+        "hit_at_3_str": "14/15",
+        "filter_compliance_str": "3/3"
+      }
+    }
+  }
+}

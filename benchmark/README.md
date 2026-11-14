@@ -54,3 +54,4 @@ Sau khi chọn, cố định cấu hình và chạy test một lần. Kết qu�
 ## Nhật ký thay đổi
 
 - 2026-11-14: tạo bộ câu hỏi; chưa có lần chạy truy xuất nào.
+- 2026-11-14 10:31: chạy dev → `select` → test (mỗi bước 1 lần). B và C hòa ở mọi tiêu chí đã chốt (Hit@3 14/15, Hit@1 10/15, filter 3/3, cùng index). Tie-break **chưa được chốt trước**: chọn B theo thứ tự trong cấu hình; ghi nhận đây là quyết định sau khi xem dev. Bộ câu hỏi và nhãn không đổi; test chỉ chạy một lần sau khi chọn.
