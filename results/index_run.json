@@ -1,0 +1,179 @@
+{
+  "run_at": "2026-11-14T03:25:28+00:00",
+  "embedding": {
+    "provider": "local (Sentence Transformers / Hugging Face cache)",
+    "model": "bkai-foundation-models/vietnamese-bi-encoder",
+    "revision": "84f9d9ada0d1a3c37557398b9ae9fcedcdf40be0",
+    "dimensions": 768,
+    "normalize": true,
+    "preprocessing": "pyvi word segmentation; same for query and document",
+    "max_seq_length": 256,
+    "python": "3.12.6",
+    "sentence_transformers": "5.7.0",
+    "torch": "2.15.0",
+    "device": "mps",
+    "cost_usd": 0.0
+  },
+  "vector_store": {
+    "postgres": "16.16 (Debian 16.16-1.pgdg12+1)",
+    "pgvector": "0.8.7",
+    "table": "chunks",
+    "metric": "cosine (<=>)",
+    "search": "exact (sequential scan, no ANN index)"
+  },
+  "model_load_seconds": 34.85,
+  "content_pages": 85,
+  "strategies": {
+    "A": {
+      "index": "A",
+      "chunking": "fixed_size",
+      "params": {
+        "size": 500,
+        "overlap": 50
+      },
+      "use_filter": false,
+      "description": "Cửa sổ 500 ký tự, overlap 50, cắt trong từng trang; metadata nguồn/trang/chương; không lọc"
+    },
+    "B": {
+      "index": "B",
+      "chunking": "by_article",
+      "params": {
+        "max_size": 800
+      },
+      "use_filter": false,
+      "description": "Theo Điều/khoản, tối đa 800 ký tự, không trộn 2 Điều, đoạn tiếp nối có tiền tố tiêu đề Điều; không lọc"
+    },
+    "C": {
+      "index": "B",
+      "chunking": "by_article",
+      "params": {
+        "max_size": 800
+      },
+      "use_filter": true,
+      "description": "Giống B; lọc chapter khi câu hỏi có filter (câu không có filter chạy như B)"
+    }
+  },
+  "first_ingest": {
+    "A": {
+      "strategy_index": "A",
+      "params": {
+        "size": 500,
+        "overlap": 50
+      },
+      "chunk_count": 448,
+      "length_chars": {
+        "min": 57,
+        "p25": 499.0,
+        "median": 500.0,
+        "p75": 500.0,
+        "max": 500,
+        "mean": 458.4,
+        "total_chars": 205369
+      },
+      "tokens_model": {
+        "min": 11,
+        "p25": 85.0,
+        "median": 92.0,
+        "p75": 99.0,
+        "max": 138,
+        "mean": 87.8,
+        "total": 39353,
+        "max_seq_length": 256,
+        "chunks_truncated": 0
+      },
+      "embedded_now": 448,
+      "upsert": {
+        "inserted": 448,
+        "updated": 0,
+        "deleted": 0,
+        "unchanged": 0
+      },
+      "seconds": {
+        "chunking": 0.01,
+        "embedding": 10.53,
+        "store": 0.94,
+        "total": 11.48
+      },
+      "db": {
+        "rows": 448,
+        "distinct_ids": 448,
+        "duplicate_text_same_page": 0
+      }
+    },
+    "B": {
+      "strategy_index": "B",
+      "params": {
+        "max_size": 800
+      },
+      "chunk_count": 391,
+      "length_chars": {
+        "min": 10,
+        "p25": 326.0,
+        "median": 536.0,
+        "p75": 686.0,
+        "max": 895,
+        "mean": 508.1,
+        "total_chars": 198650
+      },
+      "tokens_model": {
+        "min": 4,
+        "p25": 65.0,
+        "median": 102.0,
+        "p75": 128.0,
+        "max": 195,
+        "mean": 96.8,
+        "total": 37842,
+        "max_seq_length": 256,
+        "chunks_truncated": 0
+      },
+      "embedded_now": 391,
+      "upsert": {
+        "inserted": 391,
+        "updated": 0,
+        "deleted": 0,
+        "unchanged": 0
+      },
+      "seconds": {
+        "chunking": 0.01,
+        "embedding": 9.62,
+        "store": 0.53,
+        "total": 10.16
+      },
+      "db": {
+        "rows": 391,
+        "distinct_ids": 391,
+        "duplicate_text_same_page": 0
+      }
+    }
+  },
+  "reingest_check": {
+    "A": {
+      "upsert": {
+        "inserted": 0,
+        "updated": 0,
+        "deleted": 0,
+        "unchanged": 448
+      },
+      "db": {
+        "rows": 448,
+        "distinct_ids": 448,
+        "duplicate_text_same_page": 0
+      },
+      "passed": true
+    },
+    "B": {
+      "upsert": {
+        "inserted": 0,
+        "updated": 0,
+        "deleted": 0,
+        "unchanged": 391
+      },
+      "db": {
+        "rows": 391,
+        "distinct_ids": 391,
+        "duplicate_text_same_page": 0
+      },
+      "passed": true
+    }
+  }
+}

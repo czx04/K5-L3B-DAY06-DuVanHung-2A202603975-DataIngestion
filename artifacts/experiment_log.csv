@@ -1,4 +1,4 @@
 strategy,chunking,chunk_size,overlap,metadata,filter,vectorizer,hypothesis,dev_hit1,dev_hit3,test_hit1,test_hit3,notes
-A,,,,,,,,,,,,
-B,,,,,,,,,,,,
-C,,,,,,,,,,,,
+A,fixed_size (cửa sổ ký tự trong từng trang),500,50,"document_id, source, page, chapter/section/article tại đầu cửa sổ",không,bkai-foundation-models/vietnamese-bi-encoder (768d, pyvi segmentation, max 256 tokens) + pgvector cosine exact,"Baseline: cửa sổ cố định dễ cắt ngang khoản/điểm và trộn 2 Điều, nên evidence dài (q07, q14) có thể bị tách và Hit@3 thấp hơn B",,,,,"448 chunk; 18/20 evidence nằm trọn trong 1 chunk (kiểm tra tĩnh trước khi chạy)"
+B,by_article (theo Điều/khoản trong từng trang),<=800,0,"như A; chunk không trộn 2 Điều/2 Chương; đoạn tiếp nối có tiền tố tiêu đề Điều",không,bkai-foundation-models/vietnamese-bi-encoder (768d, pyvi segmentation, max 256 tokens) + pgvector cosine exact,"Giữ trọn khoản + tiêu đề Điều giúp chunk tự hiểu được, tăng Hit@1/Hit@3 và coherence so với A",,,,,"391 chunk; 20/20 evidence nằm trọn trong 1 chunk; max 800 vì model cắt ở 256 token (chốt trước khi chạy); A–B đổi cách chunk (trung vị ~500 vs ~536 ký tự)"
+C,by_article (dùng chung index B),<=800,0,như B,"chapter khi câu hỏi có filter (q13, q14, q15, q20); câu khác chạy như B",bkai-foundation-models/vietnamese-bi-encoder (768d, pyvi segmentation, max 256 tokens) + pgvector cosine exact,"Lọc theo Chương loại nhiễu từ chương khác (vd Điều 105 khi hỏi giờ làm của người chưa thành niên), cải thiện các câu có filter, không đổi câu khác",,,,,"B–C chỉ khác filter"

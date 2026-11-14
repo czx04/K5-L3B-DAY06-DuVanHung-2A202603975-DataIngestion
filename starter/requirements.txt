@@ -1,4 +1,9 @@
-# Core setup and PDF parsing. Choose and install an embedding SDK separately.
+# Core setup and PDF parsing
 psycopg[binary]==3.3.8
 pypdf>=5,<7
 python-dotenv>=1,<2
+# Embedding (local, default): bkai-foundation-models/vietnamese-bi-encoder
+sentence-transformers>=3,<6
+pyvi>=0.1.1   # Vietnamese word segmentation required by the model
+# Optional, only if EMBEDDING_PROVIDER=openai
+# openai>=1
