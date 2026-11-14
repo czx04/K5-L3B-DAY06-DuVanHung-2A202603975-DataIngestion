@@ -1,0 +1,62 @@
+{
+  "elapsed_seconds": 4.61,
+  "physical_pages": 86,
+  "content_pages_counted": 85,
+  "chars_counted": 187360,
+  "chars_per_page": {
+    "min": 1186,
+    "median": 2220,
+    "max": 2663
+  },
+  "split_syllables_fixed": {
+    "rules": 798,
+    "vocab": 37
+  },
+  "articles_found": 219,
+  "chapters_found": 17,
+  "normalization_steps": [
+    "Unicode NFC, NBSP/tab -> space, gộp khoảng trắng",
+    "Bỏ số trang đầu trang (dòng chỉ chứa đúng số trang)",
+    "Tách chú thích cuối trang (footnote sửa đổi) sang metadata.footnotes; bỏ số chú thích dính chữ",
+    "Nối âm tiết bị tách bởi text layer: luật phụ âm đầu + nguyên âm (c ủa), nguyên âm đôi (ngư ời, vi ệc, tu ổi, quy ền)",
+    "Nối âm tiết theo từ vựng của chính tài liệu (lu ật, kho ản, ho ặc): 'ab' xuất hiện >=3 lần và >=2x 'b'",
+    "Nối dòng bị ngắt thành đoạn; giữ ranh giới Chương/Mục/Điều/khoản/điểm làm xuống dòng"
+  ],
+  "known_limitations": [
+    "Trang 86 (phần cuối Điều 219, toàn bộ Điều 220 Hiệu lực thi hành, khối ký VBHN) có text layer lỗi, bị loại; không OCR vì máy không có gói tiếng Việt cho tesseract.",
+    "Luật nối âm tiết có thể bỏ sót trường hợp hiếm; đã kiểm tra thủ công danh sách cặp được nối (không thấy nối sai).",
+    "Trang 1 chứa phần mở đầu VBHN (quốc hiệu, căn cứ) ngoài nội dung điều luật; vẫn tính vì phần lớn trang là Điều 1-3.",
+    "Trang 84-85 chủ yếu là Điều 219 sửa đổi luật khác (Luật BHXH, BLTTDS); các 'Điều' được trích dẫn trong đó không được coi là điều của BLLĐ."
+  ],
+  "issues": [
+    {
+      "source_id": "blld-vbhn-125-2025",
+      "page": 1,
+      "type": "footnote_separated",
+      "detail": "1 Luật Công nghiệp công nghệ số số 71/2025/QH15 có căn cứ ban hành như sau:\n“Căn cứ Hiến pháp nước Cộng hòa xã hội chủ nghĩa Việt Nam;\nQuốc hội ban hành Luật Cô"
+    },
+    {
+      "source_id": "blld-vbhn-125-2025",
+      "page": 59,
+      "type": "footnote_separated",
+      "detail": "2 Khoản này được bổ sung theo quy định tại khoản 4 Điều 49 của Luật Công nghiệp công nghệ số số 71/2025/QH15, có hiệu lực kể từ ngày 01 tháng 01 năm 2026."
+    },
+    {
+      "source_id": "blld-vbhn-125-2025",
+      "page": 83,
+      "type": "footnote_separated",
+      "detail": "3 Điều 50 của Luật Công nghiệp công nghệ số số 71/2025/QH15, có hiệu lực kể từ ngày 01 tháng 01 năm 2026 quy định như sau:\n“Điều 50. Hiệu lực thi hành\n1. Luật n"
+    },
+    {
+      "source_id": "blld-vbhn-125-2025",
+      "page": 86,
+      "type": "garbled_text_layer",
+      "detail": {
+        "letters": 1635,
+        "vi_marked_ratio": 0.0,
+        "junk_ratio": 0.0394
+      },
+      "sample": "86 \nlao d{>ng ma Ban tr9ng tai lao d(>ng khong duqc thanh l~p, Ban tr9ng tai lao d()ng \nkhong ra quy8t dinh giai quySt tranh chdp ho~c m{>t trong cac hen khong "
+    }
+  ]
+}
